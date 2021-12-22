@@ -40,3 +40,18 @@ function verificadorDeNavegacion(registros) {
 secciones.forEach(seccion => {
     observador.observe(seccion);
 });
+
+//Efecto de paralaje lateral en ilustraciones de la página de inicio
+let ilustracionDerecha = document.querySelector('.ilustracionDerecha');
+
+let ilustracionIzquierda = document.querySelector('.ilustracionIzquierda');
+
+window.addEventListener('scroll', () => {
+    let valorDeParalaje = window.scrollY;
+
+    ilustracionIzquierda.style.left = valorDeParalaje * -0.25 + 'px';
+    ilustracionDerecha.style.right = valorDeParalaje * -0.25 + 'px';
+});
+
+//Efecto de paralaje vertical en texto de la página de inicio
+var rellax = new Rellax('.rellax');

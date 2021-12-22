@@ -7,6 +7,7 @@
     grid-template-columns: repeat(8, 1fr);
     position: fixed;
     transition: 0.4s ease;
+    z-index: 99;
 
     .logo {
         grid-column-start: 1;
