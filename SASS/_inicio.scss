@@ -52,6 +52,20 @@
             }
         }
     }
+
+    .ilustracionDerecha {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 30%;
+    }
+
+    .ilustracionIzquierda {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30%;
+    }
 }
 
 //Diseño responsivo
@@ -108,6 +122,14 @@
                 }
             }
         }
+
+        .ilustracionDerecha {
+            display: none;
+        }
+
+        .ilustracionIzquierda {
+            width: 70%;
+        }
     }
 }
 
@@ -130,6 +152,10 @@
                     font-size: 4vw;
                 }
             }
+        }
+
+        .ilustracionIzquierda {
+            width: 90%;
         }
     }
 }

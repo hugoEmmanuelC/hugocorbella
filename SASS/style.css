@@ -515,6 +515,20 @@ body .contacto {
   background-color: var(--colorSecundario);
 }
 
+.inicio .ilustracionDerecha {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+}
+
+.inicio .ilustracionIzquierda {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+}
+
 @media screen and (max-aspect-ratio: 1 / 1) {
   .inicio .contenedorGeneral {
     padding-top: 0;
@@ -551,6 +565,12 @@ body .contacto {
     font-size: 3vw;
     padding: 5.5vw;
   }
+  .inicio .ilustracionDerecha {
+    display: none;
+  }
+  .inicio .ilustracionIzquierda {
+    width: 70%;
+  }
 }
 
 @media screen and (max-aspect-ratio: 1 / 2) {
@@ -562,6 +582,9 @@ body .contacto {
   }
   .inicio .contenedorGeneral .contenedorTexto .botonContacto {
     font-size: 4vw;
+  }
+  .inicio .ilustracionIzquierda {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */
