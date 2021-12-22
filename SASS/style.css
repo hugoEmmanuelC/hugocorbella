@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,7 +11,9 @@ body section {
 }
 
 body .inicio {
-  background-color: grey;
+  background-image: url("../Imágenes/Imagen de la página de inicio.png");
+  background-size: cover;
+  background-position: center;
 }
 
 body .portafolio {
@@ -431,6 +434,134 @@ body .contacto {
   100% {
     -webkit-transform: translateY(0px) rotate(90deg);
             transform: translateY(0px) rotate(90deg);
+  }
+}
+
+.inicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.inicio .contenedorGeneral {
+  height: 85%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20vh;
+  padding-right: 15vh;
+  padding-left: 15vh;
+}
+
+.inicio .contenedorGeneral .contenedorTexto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inicio .contenedorGeneral .contenedorTexto .titulo {
+  color: white;
+  font-family: gothamBlack;
+  margin-bottom: 3vh;
+  font-size: 4vh;
+}
+
+.inicio .contenedorGeneral .contenedorTexto .informacion {
+  color: white;
+  font-family: gothamLight;
+  margin-bottom: 3vh;
+  font-size: 2.5vh;
+}
+
+.inicio .contenedorGeneral .contenedorTexto .botonContacto {
+  color: white;
+  text-decoration: none;
+  font-family: gothamBlack;
+  padding: 3vh;
+  background-color: var(--colorPrincipal);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  font-size: 2.5vh;
+}
+
+.inicio .contenedorGeneral .contenedorTexto .botonContacto:hover {
+  color: var(--colorPrincipal);
+  background-color: var(--colorSecundario);
+}
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+  .inicio .contenedorGeneral {
+    padding-top: 0;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .inicio .contenedorGeneral .contenedorTexto .titulo {
+    font-size: 3.5vw;
+    margin-bottom: 4vw;
+  }
+  .inicio .contenedorGeneral .contenedorTexto .informacion {
+    font-size: 2.3vw;
+    margin-bottom: 4vw;
+  }
+  .inicio .contenedorGeneral .contenedorTexto .botonContacto {
+    font-size: 2.3vw;
+    padding: 4vw;
+  }
+}
+
+@media screen and (max-aspect-ratio: 2 / 3) {
+  .inicio .contenedorGeneral .contenedorTexto .titulo {
+    font-size: 5vw;
+    margin-bottom: 5.5vw;
+  }
+  .inicio .contenedorGeneral .contenedorTexto .informacion {
+    font-size: 3vw;
+    margin-bottom: 5.5vw;
+  }
+  .inicio .contenedorGeneral .contenedorTexto .botonContacto {
+    font-size: 3vw;
+    padding: 5.5vw;
+  }
+}
+
+@media screen and (max-aspect-ratio: 1 / 2) {
+  .inicio .contenedorGeneral .contenedorTexto .titulo {
+    font-size: 6vw;
+  }
+  .inicio .contenedorGeneral .contenedorTexto .informacion {
+    font-size: 4vw;
+  }
+  .inicio .contenedorGeneral .contenedorTexto .botonContacto {
+    font-size: 4vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

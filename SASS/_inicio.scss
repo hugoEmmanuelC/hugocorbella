@@ -1,0 +1,135 @@
+.inicio {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+
+    .contenedorGeneral {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 20vh;
+        padding-right: 15vh;
+        padding-left: 15vh;
+
+        .contenedorTexto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+
+            .titulo {
+                color: white;
+                font-family: gothamBlack;
+                margin-bottom: 3vh;
+                font-size: 4vh;
+            }
+
+            .informacion {
+                color: white;
+                font-family: gothamLight;
+                margin-bottom: 3vh;
+                font-size: 2.5vh;
+            }
+
+            .botonContacto {
+                color: white;
+                text-decoration: none;
+                font-family: gothamBlack;
+                padding: 3vh;
+                background-color: var(--colorPrincipal);
+                transition: 0.4s ease;
+                font-size: 2.5vh;
+            }
+
+            .botonContacto:hover {
+                color: var(--colorPrincipal);
+                background-color: var(--colorSecundario);
+            }
+        }
+    }
+}
+
+//Diseño responsivo
+@media screen and (max-aspect-ratio: 1/1) {
+    .inicio {
+
+        .contenedorGeneral {
+            padding-top: 0;
+            padding-left: 20vw;
+            padding-right: 20vw;
+            align-items: center;
+
+            .contenedorTexto {
+
+                .titulo {
+                    font-size: 3.5vw;
+                    margin-bottom: 4vw;
+                }
+
+                .informacion {
+                    font-size: 2.3vw;
+                    margin-bottom: 4vw;
+                }
+
+                .botonContacto {
+                    font-size: 2.3vw;
+                    padding: 4vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-aspect-ratio: 2/3) {
+    .inicio {
+
+        .contenedorGeneral {
+
+            .contenedorTexto {
+
+                .titulo {
+                    font-size: 5vw;
+                    margin-bottom: 5.5vw;
+                }
+
+                .informacion {
+                    font-size: 3vw;
+                    margin-bottom: 5.5vw;
+                }
+
+                .botonContacto {
+                    font-size: 3vw;
+                    padding: 5.5vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/2) {
+    .inicio {
+
+        .contenedorGeneral {
+
+            .contenedorTexto {
+
+                .titulo {
+                    font-size: 6vw;
+                }
+
+                .informacion {
+                    font-size: 4vw;
+                }
+
+                .botonContacto {
+                    font-size: 4vw;
+                }
+            }
+        }
+    }
+}

@@ -12,7 +12,9 @@ body {
     }
 
     .inicio {
-        background-color: grey;
+        background-image: url('../Imágenes/Imagen\ de\ la\ página\ de\ inicio.png');
+        background-size: cover;
+        background-position: center;
     }
 
     .portafolio {
@@ -47,3 +49,4 @@ body {
 
 //Importaciones
 @import 'barraDeNavegacion';
+@import 'inicio';
