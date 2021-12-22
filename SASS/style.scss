@@ -1,0 +1,49 @@
+//Estilos principales
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    section {
+        min-height: 100vh;
+    }
+
+    .inicio {
+        background-color: grey;
+    }
+
+    .portafolio {
+        background-color: white;
+    }
+
+    .servicios {
+        background-color: grey;
+    }
+
+    .contacto {
+        background-color: white;
+    }
+}
+
+//Variables
+:root {
+    --colorPrincipal: #fc3c3c;
+    --colorSecundario: #ccecf4;
+}
+
+//Fuentes
+@font-face {
+    font-family: gothamBlack;
+    src: url(../Fuentes/Gotham/Gotham-Black.otf);
+}
+
+@font-face {
+    font-family: gothamLight;
+    src: url(../Fuentes/Gotham/Gotham-Light.otf);
+}
+
+//Importaciones
+@import 'barraDeNavegacion';

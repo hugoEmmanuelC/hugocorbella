@@ -1,0 +1,282 @@
+.barraDeNavegacion {
+    width: 100vw;
+    height: 15vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(8, 1fr);
+    position: fixed;
+    transition: 0.4s ease;
+
+    .logo {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+        a {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: 60%;
+            }
+        }
+    }
+
+    .botonMenu {
+        display: none;
+    }
+
+    .iconoMenu {
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        &__linea {
+            display: flex;
+            position: relative;
+            background-color: var(--colorPrincipal);
+            height: 2px;
+            width: 20px;
+            border-radius: 4px;
+            transition: 0.8s ease;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                border-radius: 4px;
+                background-color: var(--colorPrincipal);
+                transition: 0.8s ease;
+            }
+
+            &::before  {
+                transform: translateY(-5px);
+            }
+
+            &::after  {
+                transform: translateY(5px);
+            }
+        }
+    }
+
+    .enlacesDeNavegacion {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .enlaceDeNavegacion {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+                color: var(--colorPrincipal);
+                font-family: gothamBlack;
+                font-size: 2vh;
+                transition: 0.4s ease;
+            }
+
+            .seccionVisualizada {
+                padding: 2vh;
+                background-color: var(--colorPrincipal);
+                color: white;
+            }
+        }
+    }
+}
+
+.desplazada {
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+//Diseño responsivo
+@media screen and (max-aspect-ratio: 933/633) {
+    .barraDeNavegacion {
+
+        .enlacesDeNavegacion {
+            grid-column-start: 4;
+        }
+    }
+}
+
+@media screen and (max-aspect-ratio: 733/633) {
+    .barraDeNavegacion {
+
+        .enlacesDeNavegacion {
+            grid-column-start: 3;
+        }
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .barraDeNavegacion {
+
+        .logo {
+            grid-column-start: 4;
+            grid-column-end: 6;
+        }
+
+        .iconoMenu {
+            display: flex;
+            grid-column-start: 6;
+            grid-column-end: 9;
+
+            &__linea {
+                animation: cierreMedio 0.8s backwards;
+                animation-direction: reverse;
+
+                &::before {
+                    animation: cierreSuperior 0.8s backwards;
+                    animation-direction: reverse;
+                }
+
+                &::after {
+                    animation: cierreInferior 0.8s backwards;
+                    animation-direction: reverse;
+                }
+            }
+        }
+
+        .enlacesDeNavegacion {
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            grid-column-start: 1;
+            background-color: var(--colorPrincipal);
+            flex-direction: column;
+            clip-path: circle(200px at top right);
+            opacity: 0;
+            transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
+
+            .enlaceDeNavegacion {
+
+                a {
+                    color: var(--colorSecundario);
+                }
+
+                .seccionVisualizada {
+                    color: red;
+                    background-color: var(--colorSecundario);
+                }
+            }
+        }
+
+        .botonMenu:checked ~ .enlacesDeNavegacion {
+            opacity: 1;
+            clip-path: circle(100% at center);
+        }
+
+        .botonMenu:checked ~ .iconoMenu {
+
+            .iconoMenu__linea {
+                background-color: white;
+                animation: aperturaMedia 0.8s forwards;
+
+                &::before {
+                    background-color: white;
+                    animation: aperturaSuperior 0.8s forwards;
+                }
+
+                &::after {
+                    background-color: white;
+                    animation: aperturaInferior 0.8s forwards;
+                }
+            }
+        }
+    }
+}
+
+//Animaciones
+@keyframes aperturaSuperior {
+
+    0% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(90deg);
+    }
+}
+
+@keyframes aperturaMedia {
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes aperturaInferior {
+
+    0% {
+        transform: translateY(5px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(90deg);
+    }
+}
+
+@keyframes cierreSuperior {
+
+    0% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(90deg);
+    }
+}
+
+@keyframes cierreMedio {
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes cierreInferior {
+
+    0% {
+        transform: translateY(5px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(90deg);
+    }
+}

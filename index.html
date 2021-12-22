@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Corbella</title>
+
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="SASS/style.css">
+
+    <!--Ícono de la página-->
+    <link rel="shortcut icon" href="Imágenes/Logo Hugo Corbella.svg" type="image/x-icon">
+</head>
+<body>
+    <!--Inicio de código para cuerpo de la página-->
+
+    <!--Barra de navegación-->
+    <header class="barraDeNavegacion">
+
+        <!--Logo-->
+        <div class="logo">
+            <a href="#">
+                <img src="Imágenes/Logo Hugo Corbella.svg" alt="Hugo Corbella">
+            </a>
+        </div>
+
+        <!--Botón del menú responsivo-->
+        <input type="checkbox" name="botonMenu" id="botonMenu" class="botonMenu">
+
+        <label for="botonMenu" class="iconoMenu">
+            <span class="iconoMenu__linea"></span>
+        </label>
+
+        <!--Enlaces de navegacion-->
+        <ul class="enlacesDeNavegacion">
+            <li class="enlaceDeNavegacion"><a data-page="inicio" href="#">INICIO</a></li>
+
+            <li class="enlaceDeNavegacion"><a data-page="portafolio" href="#">PORTAFOLIO</a></li>
+
+            <li class="enlaceDeNavegacion"><a data-page="servicios" href="#">SERVICIOS</a></li>
+
+            <li class="enlaceDeNavegacion"><a data-page="contacto" href="#">CONTACTO</a></li>
+        </ul>
+    </header>
+
+    <section data-index="0" class="inicio"></section>
+    <section data-index="1" class="portafolio"></section>
+    <section data-index="2" class="servicios"></section>
+    <section data-index="3" class="contacto"></section>
+
+    <!--Final de código para cuerpo de la página-->
+
+    <!--Scripts-->
+    <script src="JavaScript/main.js"></script>
+</body>
+</html>
