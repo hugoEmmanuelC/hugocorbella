@@ -441,18 +441,22 @@ body .contacto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .inicio .contenedorGeneral {
-  height: 85%;
+  height: 70%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -515,17 +519,27 @@ body .contacto {
   background-color: var(--colorSecundario);
 }
 
-.inicio .ilustracionDerecha {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.inicio .contenedorIlustraciones {
+  height: 15vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.inicio .contenedorIlustraciones .ilustracionDerecha {
+  position: relative;
   width: 30%;
 }
 
-.inicio .ilustracionIzquierda {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+.inicio .contenedorIlustraciones .ilustracionIzquierda {
+  position: relative;
   width: 30%;
 }
 
@@ -565,10 +579,10 @@ body .contacto {
     font-size: 3vw;
     padding: 5.5vw;
   }
-  .inicio .ilustracionDerecha {
+  .inicio .contenedorIlustraciones .ilustracionDerecha {
     display: none;
   }
-  .inicio .ilustracionIzquierda {
+  .inicio .contenedorIlustraciones .ilustracionIzquierda {
     width: 70%;
   }
 }
@@ -583,7 +597,7 @@ body .contacto {
   .inicio .contenedorGeneral .contenedorTexto .botonContacto {
     font-size: 4vw;
   }
-  .inicio .ilustracionIzquierda {
+  .inicio .contenedorIlustraciones .ilustracionIzquierda {
     width: 90%;
   }
 }
