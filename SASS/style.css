@@ -6,8 +6,18 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body section {
   min-height: 100vh;
+  overflow: hidden;
 }
 
 body .inicio {
